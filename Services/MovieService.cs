@@ -52,20 +52,20 @@ namespace MoviesAPI.Services
             _context.SaveChanges();
         }
 
-        //public void AddMultiple(List<MoviesVM> movies)
-        //{
-        //    foreach (var movie in movies)
-        //    {
-        //        var newMovie = new Movie()
-        //        {
-        //            Name = movie.Name,
-        //            Year = movie.Year,
-        //            Genre = movie.Genre,
-        //        };
-        //        _context.Movies.Add(newMovie);
-        //        _context.SaveChanges();
-        //    }
-        //}
+        public void AddMultiple(List<MoviesVM> movies)
+        {
+            foreach (var movie in movies)
+            {
+                var newMovie = new Movie()
+                {
+                    Name = movie.Name,
+                    Year = movie.Year,
+                    Genre = movie.Genre,
+                };
+                _context.Movies.Add(newMovie);
+                _context.SaveChanges();
+            }
+        }
 
 
     }

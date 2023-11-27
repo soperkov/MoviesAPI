@@ -48,12 +48,12 @@ namespace MoviesAPI.Controllers
             return Ok();
         }
 
-        //[HttpPost]
-        //public IActionResult AddMultiple([FromBody] List<MoviesVM> movies)
-        //{
-        //    MovieService.AddMultiple(movies);
-        //    return Ok();
-        //}
+        [HttpPost("multiple")]
+        public IActionResult AddMultiple([FromBody] List<MoviesVM> movies)
+        {
+            MovieService.AddMultiple(movies);
+            return Ok();
+        }
 
     }
 
